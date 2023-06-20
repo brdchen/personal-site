@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import { useTheme } from '@mui/material';
 import { Avatar } from '../../lib/mui';
-import profilePicture from '../../assets/prof_pic.jpg';
+import profilePicture from '../../assets/pixel_webdev.svg';
 import pixelSpace from '../../assets/pixel_space.svg';
 import { ThemeProvider } from '@emotion/react';
 import Image from 'next/image';

@@ -13,7 +13,7 @@ const Root = styled.div`
 `;
 
 const TitleContainer = styled.div`
-    margin-bottom: 4px;
+    margin-bottom: 12px;
     font-size: 44px;
 `;
 
@@ -35,16 +35,13 @@ const Intro: FunctionComponent = () => {
     return (
         <Root>
             <TitleContainer>
-                <span>Hello</span>
+                <span>{`Hi, I'm Brad Chen`}</span>
             </TitleContainer>
-            <TextContainer>
-                <span>{`I'm Bradford Chen`}</span>
-            </TextContainer>
             <TextContainer>
                 <TypeWriterPrefix>{`I'm a `}</TypeWriterPrefix>
                 <TypewriterWrapper>
                     <Typewriter onInit={(typewriter) => {
-                        typewriter.typeString(`   Full-stack Engineer`).pauseFor(3000).deleteAll().typeString('Photographer').pauseFor(3000).deleteAll().typeString('Tennis Player').pauseFor(3000).deleteAll().start()
+                        typewriter.typeString(`Full-stack Engineer.`).pauseFor(2500).deleteAll().typeString('React Developer.').pauseFor(2500).deleteAll().typeString('Backend Engineer.').pauseFor(2500).deleteAll().start()
                     }} options={{ autoStart: true, loop: true }} />
                 </TypewriterWrapper>
             </TextContainer>
