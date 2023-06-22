@@ -10,7 +10,7 @@ const Root = styled.div`
     flex-shrink: 1;
     max-width: 40rem;
     min-width: 0;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
         margin-left: 1.5rem;
     }
 `;

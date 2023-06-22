@@ -11,17 +11,20 @@ const Root = styled.div`
     flex-direction: row;
     position: relative;
     padding: 8rem 0 0 8rem;
-    align-content: center;
-    justify-content: center;
+    @media screen and (max-width: 1000px) {
+        padding: 8rem 0 0 0;
+    }
 `;
 
 const StyledIllustration = styled(Image)`
     max-width: 45vw;
     height: auto;
-    justify-content: flex-end;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
         visibility: hidden;
         display: none;
+    }
+    @media screen and (min-width: 2100px) {
+        max-width: 40vw;
     }
 `
 
