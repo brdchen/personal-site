@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import { useTheme } from '@mui/material';
 import pixelSpace from '../../assets/pixel_space.svg';
@@ -16,9 +16,13 @@ const Root = styled.div`
 `;
 
 const StyledIllustration = styled(Image)`
-    width: 900px;
+    max-width: 45vw;
     height: auto;
     justify-content: flex-end;
+    @media screen and (max-width: 600px) {
+        visibility: hidden;
+        display: none;
+    }
 `
 
 const Landing: FunctionComponent = () => {

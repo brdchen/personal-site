@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import Typewriter from 'typewriter-effect';
 
 import githubIcon from '../../assets/icons/github.svg';

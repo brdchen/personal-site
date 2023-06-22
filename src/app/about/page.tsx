@@ -1,8 +1,7 @@
 'use client';
 
 import styled from '@emotion/styled';
-import { FunctionComponent } from 'react';
-import Image from 'next/image';
+import React, { FunctionComponent } from 'react';
 
 import Layout from '../components/Layout';
 import profilePic from '../../assets/prof_pic.jpg';
