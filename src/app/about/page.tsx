@@ -62,7 +62,6 @@ const Hobbies = styled.span`
 const ImageContainer = styled.div`
     justify-self: flex-end;
     margin: 2rem 3rem 2rem 0;
-    max-height: 45rem;
     max-width: 28rem;
 `;
 
@@ -110,7 +109,7 @@ const About: FunctionComponent = () => {
                             </Link>{`, and at `}<Bold>{`Amazon`}</Bold>{` where I worked with ML research scientists to help serve Amazon.com ads.`}
                         </Description>
                         <Hobbies>
-                            {`Outside of work, I love playing playing and watching tennis, cooking, working out, skiing, photography, and reading novels.`}
+                            {`Outside of work, I love playing and watching tennis, cooking, working out, skiing, photography, and reading novels.`}
                         </Hobbies>
                         <span>
                             {`University of Washington B.S. in Computer Science`}
