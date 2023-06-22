@@ -1,7 +1,8 @@
-import React from 'react';
-import styled from "@emotion/styled";
-import { FunctionComponent } from "react";
-import NavBar from "../navbar";
+import styled from '@emotion/styled';
+import Head from 'next/head';
+import React, { FunctionComponent } from 'react';
+import NavBar from '../navbar';
+import profilePic from '../../assets/prof_pic.jpg';
 
 const Main = styled.main`
   display: flex;
@@ -17,6 +18,9 @@ interface Props {
 
 const Layout: FunctionComponent<Props> = ({ children }) => (
     <Main>
+        <Head>
+            <meta property='og:image' content={profilePic.src} />
+        </Head>
         <NavBar />
         {children}
     </Main>
