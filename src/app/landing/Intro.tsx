@@ -12,50 +12,76 @@ import twitterIcon from '../../assets/icons/twitter.svg';
 
 const Root = styled.div`
     display: flex;
-    align-content: center;
     justify-content: center;
-    flex-direction: column;
     min-width: 800px;
-    font-weight: semi-bold;
+    flex-direction: column;
     font-size: 36px;
     padding: 0px 50px 80px 100px;
+    @media screen and (max-width: 1800px) {
+        font-size: 2vw;
+        min-width: 45vw;
+    };
+    @media screen and (max-width: 1000px) {
+        margin: 0 0 0 0;
+        min-width: 100vw;
+    };
+    @media screen and (max-width: 900px) {
+        font-size: 18px;
+    };
 `;
 
 const SocialLinks = styled.div`
     display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
     margin: 30px 0 0 0;
+    @media screen and (max-width: 1000px) {
+        margin: 15px 0 0 0;
+    };
 `;
 
 const SocialLink = styled(Button)`
-    padding: 10px 40px 10px 10px;
-    vertical-align: middle;
-    horizontal-align: middle;
+    display: flex;
     border-radius: 10px;
 `;
 
 const Github = styled(SocialLink)`
     padding: 13px 40px 13px 10px;
+    @media screen and (max-width: 1000px) {
+        padding: 13px 15px 13px 0px;
+    };
 `;
 
 
 const LinkedIn = styled(SocialLink)`
     padding: 13px 40px 13px 10px;
+    @media screen and (max-width: 1000px) {
+        padding: 13px 15px 13px 0px;
+    };
 `;
 
 const Instagram = styled(SocialLink)`
     padding: 10px 38px 10px 8px;
+    @media screen and (max-width: 1000px) {
+        padding: 10px 13px 10px 0px;
+    };
 `;
 
 
 const Twitter = styled(SocialLink)`
     padding: 10px 36px 10px 6px;
+    @media screen and (max-width: 1000px) {
+        padding: 10px 12px 10px 0px;
+    };
 `;
 
 const TitleContainer = styled.div`
     margin-bottom: 12px;
     font-size: 44px;
+    @media screen and (max-width: 1800px) {
+        font-size: 2.45vw;
+    };
+    @media screen and (max-width: 900px) {
+        font-size: 22px;
+    };
 `;
 
 const TextContainer = styled.div`
@@ -64,7 +90,10 @@ const TextContainer = styled.div`
 `;
 
 const TypeWriterPrefix = styled.span`
-    margin-right: 10px;
+    margin-right: 0.6vw;
+    @media screen and (max-width: 1000px) {
+        margin-right: 0.86vw;
+    };
 `;
 
 const TypewriterWrapper = styled.span`
@@ -73,6 +102,9 @@ const TypewriterWrapper = styled.span`
 
 const StyledImage = styled(Image)`
     margin: 0 0 0 40px;
+    @media screen and (max-width: 1000px) {
+        margin: 0 0 0 25px;
+    };
 `;
 
 const Intro: FunctionComponent = () => {

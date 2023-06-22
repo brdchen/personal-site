@@ -12,7 +12,7 @@ const Root = styled.div`
     display: flex;
     flex-direction: row;
     position: relative;
-    padding: 3vh 8vw 0 0;
+    padding: 3vh 8vw 4vh 0;
     align-items: center;
     justify-content: center;
 `;
@@ -22,7 +22,7 @@ const WebDevSvg = styled(Image)`
     max-height: 50vh;
     margin-right: 5vw;
     margin-bottom: 1vw;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
         visibility: hidden;
         display: none;
     }

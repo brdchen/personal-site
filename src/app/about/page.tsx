@@ -11,7 +11,8 @@ import Link from 'next/link';
 const Root = styled.div`
     display: flex;
     position: relative;
-    margin: 4rem 0 0 0;
+    flex-direction: column;
+    margin: 4rem 1rem 1rem 1rem;
     align-items: center;
     justify-content: space-between;
     border: 2px solid rgba(255,255,255, 0.1);
@@ -20,7 +21,6 @@ const Root = styled.div`
     max-height: 100rem;
     box-shadow: 5px 10px rgba(255,255,255, 0.15);
     background: rgba(200, 200, 200, 0.12);
-    flex-direction: column;
 `;
 
 const ContentContainer = styled.div`
@@ -66,7 +66,7 @@ const ImageContainer = styled.div`
 `;
 
 const LinkText = styled.span`
-    color: #3cc4ff;
+    color: #69caf8;
     font-weight: bold;
     &:hover { 
         text-decoration: underline;
