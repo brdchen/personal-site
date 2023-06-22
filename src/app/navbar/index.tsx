@@ -10,7 +10,9 @@ const RootNav = styled.nav`
     align-items: center;
 `;
 
-const StyledButton = styled(Button) <{ currentPage: boolean }>`
+const StyledButton = styled(Button, {
+    shouldForwardProp: (prop) => prop !== 'currentPage'
+}) <{ currentPage: boolean }>`
     margin: 0px 3px 0px 3px;
     ${p => p.currentPage && `
         font-weight: bold;
