@@ -16,6 +16,7 @@ const Root = styled.div`
     min-width: 800px;
     flex-direction: column;
     font-size: 36px;
+    color: white;
     padding: 0px 50px 80px 100px;
     @media screen and (max-width: 1800px) {
         font-size: 2vw;
@@ -24,6 +25,7 @@ const Root = styled.div`
     @media screen and (max-width: 1000px) {
         margin: 0 0 0 0;
         min-width: 100vw;
+        padding: 0 0 80px 12vw;
     };
     @media screen and (max-width: 900px) {
         font-size: 18px;
