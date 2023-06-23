@@ -12,7 +12,7 @@ const Root = styled.div`
     position: relative;
     padding: 8rem 0 0 8rem;
     @media screen and (max-width: 1000px) {
-        padding: 8rem 0 0 0;
+        padding: 6rem 0 0 0;
     }
 `;
 

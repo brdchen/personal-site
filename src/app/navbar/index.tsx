@@ -13,13 +13,17 @@ const RootNav = styled.nav`
 const StyledButton = styled(Button, {
     shouldForwardProp: (prop) => prop !== 'currentPage'
 }) <{ currentPage: boolean }>`
-    margin: 0px 3px 0px 3px;
+    margin: 0 3px 0 3px;
     ${p => p.currentPage && `
         font-weight: bold;
     `}
+    @media screen and (max-width: 1000px) {
+        padding: 0.7rem 0.9rem 0.7rem 0.9rem;
+        margin: 0;
+    }
 `;
 
-const AboutMe = styled.span`
+const Text = styled.span`
     font-family: 'Verdana', sans-serif;
     font-size: 20px;
     color: white;
@@ -31,6 +35,9 @@ const AboutMe = styled.span`
         overflow: hidden;
         visibility: hidden;
     }
+    @media screen and (max-width: 1000px) {
+        font-size: 14px;
+    }
 `;
 
 const NavBar: FunctionComponent = () => {
@@ -40,22 +47,22 @@ const NavBar: FunctionComponent = () => {
         <RootNav>
             <Link href='/' passHref>
                 <StyledButton color='primary' size='large' variant='text' currentPage={currentRoute === '/'}>
-                    <AboutMe title='Home'>Home</AboutMe>
+                    <Text title='Home'>Home</Text>
                 </StyledButton>
             </Link>
             <Link href='/about' passHref>
                 <StyledButton color='primary' size='large' variant='text' currentPage={currentRoute === '/about'}>
-                    <AboutMe title='About'>About</AboutMe>
+                    <Text title='About'>About</Text>
                 </StyledButton>
             </Link>
             <Link href='/projects' passHref>
                 <StyledButton color='primary' size='large' variant='text' currentPage={currentRoute === '/projects'} >
-                    <AboutMe title='Projects'>Projects</AboutMe>
+                    <Text title='Projects'>Projects</Text>
                 </StyledButton>
             </Link>
             <Link href='/resume.pdf' target='_blank' passHref>
                 <StyledButton color='primary' size='large' variant='text' currentPage={false} title='Resume'>
-                    <AboutMe title='Resume'>Resume</AboutMe>
+                    <Text title='Resume'>Resume</Text>
                 </StyledButton>
             </Link>
             {/* <Link href='/contact' passHref>
