@@ -36,7 +36,7 @@ const Text = styled.span`
         visibility: hidden;
     }
     @media screen and (max-width: 1000px) {
-        font-size: 12px;
+        font-size: 14px;
     }
 `;
 
