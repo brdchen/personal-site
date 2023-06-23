@@ -23,9 +23,10 @@ const Root = styled.div`
         min-width: 45vw;
     };
     @media screen and (max-width: 1000px) {
-        margin: 0 0 0 0;
+        align-items: center;
+        margin: 0;
         min-width: 100vw;
-        padding: 0 0 80px 12vw;
+        padding: 0 0 80px 0;
     };
     @media screen and (max-width: 900px) {
         font-size: 18px;
@@ -89,12 +90,13 @@ const TitleContainer = styled.div`
 const TextContainer = styled.div`
     margin-bottom: 16px;
     display: flex;
+    align-content: flex-start;
 `;
 
 const TypeWriterPrefix = styled.span`
     margin-right: 0.6vw;
     @media screen and (max-width: 1000px) {
-        margin-right: 0.86vw;
+        margin-right: 1vw;
     };
 `;
 
