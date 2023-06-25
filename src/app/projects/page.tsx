@@ -30,7 +30,7 @@ const WebDevSvg = styled(Image)`
 
 const About: FunctionComponent = () => {
     return (
-        <Layout>
+        <Layout style={{ background: 'rgb(30,30,30)' }}>
             <Root>
                 <WebDevSvg src={webdev} alt='webdev' />
                 <Projects />

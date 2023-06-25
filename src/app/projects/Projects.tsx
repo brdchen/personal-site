@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
+import Link from 'next/link';
 import React, { FunctionComponent } from 'react';
 
 import { strings } from './strings';
-import Link from 'next/link';
+import ProjectTitle from './ProjectTitle';
 
 const Root = styled.div`
     display: flex;
@@ -10,6 +11,7 @@ const Root = styled.div`
     flex-shrink: 1;
     max-width: 40rem;
     min-width: 0;
+    color: white;
     @media screen and (max-width: 1000px) {
         margin-left: 1.5rem;
     }
@@ -19,21 +21,28 @@ const Section = styled.div`
     margin-bottom: 40px;
 `;
 
-const ProjectTitle = styled.span`
+const Title = styled.span`
     font-size: 22px;
     font-weight: bold;
+    position: relative;
+    z-index: 999;
+    @media screen and (max-width: 1000px) {
+        font-size: 18px;
+    }
 `;
 
 const ProjectLink = styled(Link)`
-    &:hover { 
-        text-decoration: underline;
-    };
+    position: relative;
+    
 `;
 
 const ProjectDescription = styled.div`
     min-width: 0;
     margin-top: 18px;
     margin-bottom: 10px;
+    @media screen and (max-width: 1000px) {
+        font-size: 15px;
+    }
 `;
 
 const ProjectTechPrefix = styled.span`
@@ -53,17 +62,13 @@ const LinkText = styled.span`
 
 const TechLinkText = styled(LinkText)`
     font-style: italic;
-`
+`;
 
 const Projects: FunctionComponent = () => {
     return (
         <Root>
             <Section>
-                <div>
-                    <ProjectLink href={strings.dubhacks.link} rel='noopener noreferrer' target='_blank'>
-                        <ProjectTitle>{strings.dubhacks.title}</ProjectTitle>
-                    </ProjectLink>
-                </div>
+                <ProjectTitle title={strings.dubhacks.title} link={strings.dubhacks.link} />
                 <ProjectDescription>
                     <span>{strings.dubhacks.preDubhacksDescription}</span>
                     <ProjectLink href={strings.dubhacks.dubhacksLink} rel='noopener noreferrer' target='_blank'>
@@ -81,11 +86,7 @@ const Projects: FunctionComponent = () => {
                 </div>
             </Section>
             <Section>
-                <div>
-                    <ProjectLink href={strings.lofi.link} rel='noopener noreferrer' target='_blank'>
-                        <ProjectTitle>{strings.lofi.title}</ProjectTitle>
-                    </ProjectLink>
-                </div>
+                <ProjectTitle title={strings.lofi.title} link={strings.lofi.link} />
                 <ProjectDescription>
                     <span>{strings.lofi.description}</span>
                 </ProjectDescription>
@@ -95,11 +96,7 @@ const Projects: FunctionComponent = () => {
                 </div>
             </Section>
             <Section>
-                <div>
-                    <ProjectLink href={strings.hyperspeed.link} rel='noopener noreferrer' target='_blank'>
-                        <ProjectTitle>{strings.hyperspeed.title}</ProjectTitle>
-                    </ProjectLink>
-                </div>
+                <ProjectTitle title={strings.hyperspeed.title} link={strings.hyperspeed.link} />
                 <ProjectDescription>
                     <span>{strings.hyperspeed.description}</span>
                 </ProjectDescription>
@@ -113,11 +110,7 @@ const Projects: FunctionComponent = () => {
                 </div>
             </Section>
             <Section>
-                <div>
-                    <ProjectLink href={strings.paxos.link} rel='noopener noreferrer' target='_blank'>
-                        <ProjectTitle>{strings.paxos.title}</ProjectTitle>
-                    </ProjectLink>
-                </div>
+                <ProjectTitle title={strings.paxos.title} link={strings.paxos.link} />
                 <ProjectDescription>
                     <span>{strings.paxos.description}</span>
                 </ProjectDescription>
@@ -127,9 +120,7 @@ const Projects: FunctionComponent = () => {
                 </div>
             </Section>
             <div>
-                <div>
-                    <ProjectTitle>{strings.threegle.title}</ProjectTitle>
-                </div>
+                <Title>{strings.threegle.title}</Title>
                 <ProjectDescription>
                     <span>{strings.threegle.description}</span>
                 </ProjectDescription>

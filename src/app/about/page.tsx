@@ -7,62 +7,56 @@ import Layout from '../components/Layout';
 import profilePic from '../../assets/prof_pic.jpg';
 import { Avatar } from '@mui/material';
 import Link from 'next/link';
+import Twemoji from '../components/Twemoji';
 
 const Root = styled.div`
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 4rem 1rem 1rem 1rem;
+    margin: 4vh 0 0 0;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid rgba(255,255,255, 0.1);
-    border-radius: 30px;
-    max-width: 70rem;
-    max-height: 100rem;
-    box-shadow: 5px 10px rgba(255,255,255, 0.15);
-    background: rgba(200, 200, 200, 0.12);
+    color: white;
 `;
 
 const ContentContainer = styled.div`
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 3rem;
+    max-width: 50vw;
+    @media screen and (max-width: 1000px) {
+        max-width: 80vw;
+    }
 `;
 
 const TextContainer = styled.div`
-    padding-right: 3rem;
     padding-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
     justify-content: center;
-    max-width: 60vw;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: thin;
-`;
-
-const TitleContainer = styled.div`
-    margin-top: 2rem;
-    margin-bottom: 14px;
-    font-size: 40px;
-    justify-self: center;
+    line-height: 1.4;
+    @media screen and (max-width: 1000px) {
+        font-size: 15px;
+    }
 `;
 
 const Description = styled.span`
-    margin-top: 10px;
-`;
-
-const Hobbies = styled.span`
-    margin-top: 22px;
-    margin-bottom: 22px;
+    margin-top: 32px;
 `;
 
 const ImageContainer = styled.div`
     justify-self: flex-end;
-    margin: 2rem 3rem 2rem 0;
-    max-width: 28rem;
+`;
+
+const Name = styled.p`
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 4vh;
+    @media screen and (max-width: 1000px) {
+        font-size: 24px;
+    }
 `;
 
 const LinkText = styled.span`
@@ -80,45 +74,63 @@ const Bold = styled.span`
 const EndNote = styled.span`
     font-style: italic;
     align-self: flex-start;
-    padding: 0 1rem 2rem 3rem;
     flex-wrap: wrap;
 `
 
 const About: FunctionComponent = () => {
     return (
-        <Layout>
+        <Layout style={{ background: 'rgb(30,30,30)' }}>
             <Root>
+                <ImageContainer>
+                    <Avatar src={profilePic.src} alt='me' sx={{ width: 250, height: 250 }} />
+                </ImageContainer>
+                <Name>Biography</Name>
                 <ContentContainer>
-                    <ImageContainer>
-                        <Avatar src={profilePic.src} alt='me' sx={{ width: 320, height: 320 }} />
-                    </ImageContainer>
                     <TextContainer>
-                        <TitleContainer>
-                            <span>{`About Me`}</span>
-                        </TitleContainer>
                         <Description>
-                            {`I'm currently a full stack software engineer at `}
+                            <Twemoji emoji='👋' />
+                            {` Hi there, thanks for stopping by! I'm a software engineer who is passionate about making a positive impact on the world through technology. `}
+                        </Description>
+                        <Description>
+                            <Twemoji emoji='💻' />
+                            <span>{` I'm currently at `}</span>
                             <Link href='https://convoy.com'>
                                 <LinkText>{`Convoy`}</LinkText>
                             </Link>
-                            {` on the Brokerage Tech team building a tech-driven dynamic marketplace for truck loads across mobile and web clients. Previously, I interned at `}
+                            {` building a tech-driven dynamic marketplace for truck loads across mobile and web clients. While here, I've worked on landing page recommendations and ranking, search filtering, UX-driven redesigns, and performance optimizations. I've also helped build and maintain critical tools for our internal operations team to match at-risk loads on our marketplace. Previously, I interned at `}
                             <Bold>{`Snowflake`}</Bold>
                             {` helping build `}
                             <Link href='https://medium.com/snowflake/snowflakes-elastic-cloud-services-7dfcb165a612'>
                                 <LinkText>{`their elastic cloud service`}</LinkText>
                             </Link>{`, and at `}<Bold>{`Amazon`}</Bold>{` where I worked with ML research scientists to help serve Amazon.com ads.`}
                         </Description>
-                        <Hobbies>
-                            {`Outside of work, I love playing and watching tennis, cooking, working out, skiing, photography, and reading novels.`}
-                        </Hobbies>
-                        <span>
-                            {`University of Washington B.S. in Computer Science`}
-                        </span>
+                        <Description>
+                            <Twemoji emoji='🥮' />
+                            {` While attending University of Washington, I helped plan and run one of Seattle's largest annual food festivals, `}
+                            <Link href='http://www.uwnightmarket.com/'>
+                                <LinkText>{`UW Night Market`}</LinkText>
+                            </Link>
+                            {` as an officer for the Taiwanese Student Association. `}
+                            <Twemoji emoji='🤖' />
+                            {` I was also an Executive Tech Organizer for `}
+                            <Link href='https://dubhacks.co/about'>
+                                <LinkText>{`DubHacks`}</LinkText>
+                            </Link>
+                            {` in 2019, where I built the hackathon's registration system on top of HackMIT's open-sourced Quill.`}
+                        </Description>
+                        <Description>
+                            <Twemoji emoji='🌏' />
+                            {` In 2017, I studied abroad in Japan with the Hokkaido International Foundation for an intensive Japanese language and homestay program. I now hope to travel to all seven continents and visit as many countries as possible.`}
+                        </Description>
+                        <Description>
+                            <Twemoji emoji='🎾' />
+                            {` I'm a huge tennis geek! You can often find me playing tennis and training for USTA matches. Apart from that, I love cooking, working out, skiing, photography, and reading.`}
+                        </Description>
                     </TextContainer>
+                    <EndNote>
+                        <Bold>{`Note:`}</Bold>{` This site was built using React, Typescript, Next.js, and Emotion with Material UI components. Illustrations are not my own.`}
+                    </EndNote>
                 </ContentContainer>
-                <EndNote>
-                    <Bold>{`Note:`}</Bold>{` This site was built using React, Typescript, Next.js, and Emotion with Material UI components. Illustrations are not my own.`}
-                </EndNote>
             </Root>
         </Layout >
     );
