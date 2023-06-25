@@ -121,8 +121,8 @@ const Intro: FunctionComponent = () => {
                 <TypeWriterPrefix>{`I'm a `}</TypeWriterPrefix>
                 <TypewriterWrapper>
                     <Typewriter onInit={(typewriter) => {
-                        typewriter.typeString(`Full Stack Software Engineer.`).pauseFor(2500).deleteAll().typeString('ReactJS Developer.').pauseFor(2500).deleteAll().typeString('Lifelong Learner.').pauseFor(2500).deleteAll().start()
-                    }} options={{ autoStart: true, loop: true, delay: 75 }} />
+                        typewriter.typeString(`Full Stack Software Engineer.`).pauseFor(2000).deleteAll(20).pauseFor(600).typeString('ReactJS Developer.').pauseFor(2000).deleteAll(25).pauseFor(600).typeString('Lifelong Learner.').pauseFor(2000).deleteAll(25).pauseFor(600).start()
+                    }} options={{ autoStart: true, loop: true, delay: 30 }} />
                 </TypewriterWrapper>
             </TextContainer>
             <SocialLinks>

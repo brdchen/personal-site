@@ -11,11 +11,12 @@ const Main = styled.main`
 `;
 
 interface Props {
+    style?: React.CSSProperties;
     children: React.ReactNode;
 }
 
-const Layout: FunctionComponent<Props> = ({ children }) => (
-    <Main>
+const Layout: FunctionComponent<Props> = ({ style, children }) => (
+    <Main style={style}>
         <NavBar />
         {children}
     </Main>
