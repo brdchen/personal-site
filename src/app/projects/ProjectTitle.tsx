@@ -31,9 +31,6 @@ const Color = styled.div`
     transform: translatey(-50%);
     left: -1rem;
     z-index: 1;
-    @media screen and (max-width: 1000px) {
-        top: 43%;
-    }
 `
 
 const ArrowRight = styled(Image)`
@@ -41,10 +38,10 @@ const ArrowRight = styled(Image)`
     position: relative;
     margin-left: 0.6rem;
     width: auto;
-    height: 1.2em;
+    height: 1.3em;
     z-index: 999;
     @media screen and (max-width: 1000px) {
-        height: 1em;
+        height: 1.1em;
     }
 `;
 
@@ -52,7 +49,8 @@ const Container = styled.div`
     position: relative; 
     height: 2.5em;
     width: fit-content;
-    padding-top: 0.5em;
+    display: flex;
+    align-items: center;
 `;
 
 interface Props {
@@ -75,7 +73,7 @@ const ProjectTitle: FunctionComponent<Props> = ({ title, link }) => {
             });
             hoverTL.to(colorRef.current, {
                 width: "2.5em",
-                left: "calc(100% - 1.7em)",
+                left: "calc(100% - 1.8em)",
                 ease: "Elastic.easeOut(0.4)",
                 duration: 0.6
             });
