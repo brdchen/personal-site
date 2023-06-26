@@ -13,7 +13,7 @@ const Root = styled.div`
     display: flex;
     position: relative;
     flex-direction: column;
-    margin: 4vh 0 0 0;
+    margin: 4vh 0 4vh 0;
     align-items: center;
     justify-content: space-between;
     color: white;
@@ -60,7 +60,7 @@ const Name = styled.p`
 `;
 
 const LinkText = styled.span`
-    color: #69caf8;
+    color: #8d6eff; 
     font-weight: bold;
     &:hover { 
         text-decoration: underline;
@@ -94,26 +94,26 @@ const About: FunctionComponent = () => {
                         <Description>
                             <Twemoji emoji='💻' />
                             <span>{` I'm currently at `}</span>
-                            <Link href='https://convoy.com'>
+                            <Link href='https://convoy.com' rel='noopener noreferrer' target='_blank'>
                                 <LinkText>{`Convoy`}</LinkText>
                             </Link>
                             {` building a tech-driven dynamic marketplace for truck loads across mobile and web clients. While here, I've worked on landing page recommendations and ranking, search filtering, UX-driven redesigns, and performance optimizations. I've also helped build and maintain critical tools for our internal operations team to match at-risk loads on our marketplace. Previously, I interned at `}
                             <Bold>{`Snowflake`}</Bold>
                             {` helping build `}
-                            <Link href='https://medium.com/snowflake/snowflakes-elastic-cloud-services-7dfcb165a612'>
+                            <Link href='https://medium.com/snowflake/snowflakes-elastic-cloud-services-7dfcb165a612' rel='noopener noreferrer' target='_blank'>
                                 <LinkText>{`their elastic cloud service`}</LinkText>
                             </Link>{`, and at `}<Bold>{`Amazon`}</Bold>{` where I worked with ML research scientists to help serve Amazon.com ads.`}
                         </Description>
                         <Description>
                             <Twemoji emoji='🥮' />
                             {` While attending University of Washington, I helped plan and run one of Seattle's largest annual food festivals, `}
-                            <Link href='http://www.uwnightmarket.com/'>
+                            <Link href='http://www.uwnightmarket.com/' rel='noopener noreferrer' target='_blank'>
                                 <LinkText>{`UW Night Market`}</LinkText>
                             </Link>
                             {` as an officer for the Taiwanese Student Association. `}
                             <Twemoji emoji='🤖' />
                             {` I was also an Executive Tech Organizer for `}
-                            <Link href='https://dubhacks.co/about'>
+                            <Link href='https://dubhacks.co/about' rel='noopener noreferrer' target='_blank'>
                                 <LinkText>{`DubHacks`}</LinkText>
                             </Link>
                             {` in 2019, where I built the hackathon's registration system on top of HackMIT's open-sourced Quill.`}

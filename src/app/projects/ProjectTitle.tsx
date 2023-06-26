@@ -8,7 +8,6 @@ import arrowRight from '../../assets/icons/arrow-right-solid.svg';
 
 const ProjectLink = styled(Link)`
     position: relative;
-    width: max-content;
 `;
 
 const Title = styled.span`
@@ -16,9 +15,17 @@ const Title = styled.span`
     font-weight: bold;
     position: relative;
     z-index: 999;
+    display: inline-block;
+    vertical-align: middle;
     @media screen and (max-width: 1000px) {
         font-size: 18px;
     }
+`;
+
+const Empty = styled.span`
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 `;
 
 const Color = styled.div`
@@ -38,8 +45,9 @@ const ArrowRight = styled(Image)`
     position: relative;
     margin-left: 0.6rem;
     width: auto;
-    height: 1.3em;
     z-index: 999;
+    vertical-align: middle;
+    height: 1.3em;
     @media screen and (max-width: 1000px) {
         height: 1.1em;
     }
@@ -49,8 +57,7 @@ const Container = styled.div`
     position: relative; 
     height: 2.5em;
     width: fit-content;
-    display: flex;
-    align-items: center;
+    display: inline-block;
 `;
 
 interface Props {
@@ -85,6 +92,7 @@ const ProjectTitle: FunctionComponent<Props> = ({ title, link }) => {
     return (
         <ProjectLink ref={linkRef} href={link} rel='noopener noreferrer' target='_blank' passHref>
             <Container>
+                <Empty></Empty>
                 <Title>{title}</Title>
                 <ArrowRight src={arrowRight} alt='arrow' />
                 <Color ref={colorRef} />
