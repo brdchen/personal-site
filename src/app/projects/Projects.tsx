@@ -33,13 +33,15 @@ const Title = styled.span`
 
 const ProjectLink = styled(Link)`
     position: relative;
+    color: #8d6eff;
     
 `;
 
 const ProjectDescription = styled.div`
     min-width: 0;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    line-height: 1.4;
     @media screen and (max-width: 1000px) {
         font-size: 15px;
     }
