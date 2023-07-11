@@ -14,13 +14,13 @@ export const strings = {
     lofi: {
         title: 'Lofi.me',
         description: `A Discord bot which hooks up to YouTube and Spotify to stream music and video audio in a user's current voice channel. API is accessed by typing certain commands into the Discord server chat.`,
-        link: 'https://github.com/Jyntaro/lofi.me',
+        link: 'https://github.com/brdchen/lofi.me',
         tech: 'Node.js'
     },
     hyperspeed: {
         title: 'Hyperspeed Fighters',
         description: `A simple mouse accuracy space shooter time-attack game where a player's score is determined by the amount of enemies hit. Comes with sounds, graphics, and simple animations.`,
-        link: 'https://github.com/Jyntaro/Hyperspeed-Fighters',
+        link: 'https://github.com/brdchen/Hyperspeed-Fighters',
         processingLink: 'https://processing.org',
         preProcessingTech: 'Java, ',
         processingText: 'Processing',
