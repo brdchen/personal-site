@@ -126,7 +126,7 @@ const Intro: FunctionComponent = () => {
                 </TypewriterWrapper>
             </TextContainer>
             <SocialLinks>
-                <Link href='https://github.com/Jyntaro' rel='noopener noreferrer' target='_blank'>
+                <Link href='https://github.com/brdchen' rel='noopener noreferrer' target='_blank'>
                     <Github variant='text' startIcon={<StyledImage src={githubIcon} alt='github' />} sx={{ ':hover': { bgcolor: 'rgba(90,90,230,0.3)', boxShadow: 2 } }} />
                 </Link>
                 <Link href='https://www.linkedin.com/in/bradford-chen' rel='noopener noreferrer' target='_blank'>

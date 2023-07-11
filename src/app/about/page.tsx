@@ -8,6 +8,7 @@ import profilePic from '../../assets/prof_pic.jpg';
 import { Avatar } from '@mui/material';
 import Link from 'next/link';
 import Twemoji from '../components/Twemoji';
+import ProjectTitle from '../projects/ProjectTitle';
 
 const Root = styled.div`
     display: flex;
@@ -40,6 +41,23 @@ const TextContainer = styled.div`
     @media screen and (max-width: 1000px) {
         font-size: 15px;
     }
+`;
+
+const SiteTechContainer = styled.div`
+    padding-bottom: 2rem;
+    font-size: 18px;
+    font-weight: thin;
+    line-height: 1.4;
+`;
+
+const SiteTechTitle = styled.div`
+    padding-bottom: 1rem;
+`;
+
+const TechList = styled.ul`
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    line-height: 1.5;
 `;
 
 const Description = styled.span`
@@ -127,9 +145,40 @@ const About: FunctionComponent = () => {
                             {` I'm a huge tennis geek! You can often find me playing tennis and training for USTA matches. Apart from that, I love cooking, working out, skiing, photography, and reading.`}
                         </Description>
                     </TextContainer>
+                    <SiteTechContainer>
+                        <SiteTechTitle>{`If you're curious, this site:`}</SiteTechTitle>
+                        <TechList>
+                            <li>{'Was built using React and Typescript with Next.js'}</li>
+                            <li>
+                                {'Styles CSS with '}
+                                <Link href='https://emotion.sh/docs/introduction' rel='noopener noreferrer' target='_blank'>
+                                    <LinkText>{'Emotion'}</LinkText>
+                                </Link>
+                                {' styled components'}
+                            </li>
+                            <li>{'Uses the Material UI component library'}</li>
+                            <li>
+                                {'Renders the typewriter using the '}
+                                <Link href='https://emotion.sh/docs/introduction' rel='noopener noreferrer' target='_blank'>
+                                    <LinkText>{'typewriter-effect'}</LinkText>
+                                </Link>
+                                {' package'}
+                            </li>
+                            <li>{'Is served from Netlify using Cloudflare DNS'}</li>
+                            <li>
+                                {`Was inspired by `}
+                                <Link href='https://rahulvijay-portfolio.netlify.app/' rel='noopener noreferrer' target='_blank'>
+                                    <LinkText>{`Rahul Vijay's site`}</LinkText>
+                                </Link>
+                            </li>
+                            <li>{'Is resizable and mobile friendly! Try it for yourself'}</li>
+                        </TechList>
+                        <ProjectTitle size='SM' title='Site Github' link='https://github.com/brdchen/personal-site' />
+                    </SiteTechContainer>
                     <EndNote>
-                        <Bold>{`Note:`}</Bold>{` This site was built using React, Typescript, Next.js, and Emotion with Material UI components. Illustrations are not my own.`}
+                        <Bold>{`Disclaimer: `}</Bold>{` Illustrations are not my own.`}
                     </EndNote>
+
                 </ContentContainer>
             </Root>
         </Layout >

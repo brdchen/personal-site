@@ -10,8 +10,8 @@ const ProjectLink = styled(Link)`
     position: relative;
 `;
 
-const Title = styled.span`
-    font-size: 22px;
+const Title = styled.span<{ size: 'MD' | 'SM' }>`
+    font-size: ${({ size }) => (size === 'MD' ? '22' : '20')}px;
     font-weight: bold;
     position: relative;
     z-index: 999;
@@ -63,9 +63,10 @@ const Container = styled.div`
 interface Props {
     title: string;
     link: string;
+    size?: 'MD' | 'SM';
 }
 
-const ProjectTitle: FunctionComponent<Props> = ({ title, link }) => {
+const ProjectTitle: FunctionComponent<Props> = ({ title, link, size = 'MD' }) => {
     const linkRef = useRef<HTMLAnchorElement>(null);
     const colorRef = useRef<HTMLDivElement>(null);
     const hoverTL = gsap.timeline();
@@ -93,7 +94,7 @@ const ProjectTitle: FunctionComponent<Props> = ({ title, link }) => {
         <ProjectLink ref={linkRef} href={link} rel='noopener noreferrer' target='_blank' passHref>
             <Container>
                 <Empty></Empty>
-                <Title>{title}</Title>
+                <Title size={size}>{title}</Title>
                 <ArrowRight src={arrowRight} alt='arrow' />
                 <Color ref={colorRef} />
             </Container>
