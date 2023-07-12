@@ -48,6 +48,9 @@ const SiteTechContainer = styled.div`
     font-size: 18px;
     font-weight: thin;
     line-height: 1.4;
+    @media screen and (max-width: 1000px) {
+        font-size: 15px;
+    }
 `;
 
 const SiteTechTitle = styled.div`
@@ -107,7 +110,11 @@ const About: FunctionComponent = () => {
                     <TextContainer>
                         <Description>
                             <Twemoji emoji='👋' />
-                            {` Hi there, thanks for stopping by! I'm a software engineer who is passionate about making a positive impact on the world through technology. `}
+                            {` Hi there, thanks for stopping by! I'm a software engineer who is passionate about making a positive impact on the world through technology by maximizing `}
+                            <Link href='https://80000hours.org/articles/what-is-social-impact-definition/' rel='noopener noreferrer' target='_blank'>
+                                <LinkText>{`social impact`}</LinkText>
+                            </Link>
+                            {`. `}
                         </Description>
                         <Description>
                             <Twemoji emoji='💻' />
@@ -115,7 +122,11 @@ const About: FunctionComponent = () => {
                             <Link href='https://convoy.com' rel='noopener noreferrer' target='_blank'>
                                 <LinkText>{`Convoy`}</LinkText>
                             </Link>
-                            {` building a tech-driven dynamic marketplace for truck loads across mobile and web clients. While here, I've worked on landing page recommendations and ranking, search filtering, UX-driven redesigns, and performance optimizations. I've also helped build and maintain critical tools for our internal operations team to match at-risk loads on our marketplace. Previously, I interned at `}
+                            {` building a tech-driven dynamic freight marketplace across mobile and web clients supporting truck drivers and owner operators. While here, I've worked on our landing page recommendations and ranking system, search filtering, UX-driven redesigns, and performance optimizations. I've also helped build and maintain business-critical tools for our operations team to match at-risk loads on our marketplace.`}
+                        </Description>
+                        <Description>
+                            <Twemoji emoji='❄️' />
+                            {` Previously, I interned at `}
                             <Bold>{`Snowflake`}</Bold>
                             {` helping build `}
                             <Link href='https://medium.com/snowflake/snowflakes-elastic-cloud-services-7dfcb165a612' rel='noopener noreferrer' target='_blank'>
@@ -138,7 +149,11 @@ const About: FunctionComponent = () => {
                         </Description>
                         <Description>
                             <Twemoji emoji='🌏' />
-                            {` In 2017, I studied abroad in Japan with the Hokkaido International Foundation for an intensive Japanese language and homestay program. I now hope to travel to all seven continents and visit as many countries as possible.`}
+                            {` In 2017, I studied abroad in Japan with the `}
+                            <Link href='https://www.hif.or.jp/en/summer/' rel='noopener noreferrer' target='_blank'>
+                                <LinkText>{`Hokkaido International Foundation`}</LinkText>
+                            </Link>
+                            {` for an intensive Japanese language and homestay program. I now hope to travel to all seven continents and meet new people in as many countries as possible.`}
                         </Description>
                         <Description>
                             <Twemoji emoji='🎾' />
@@ -148,15 +163,15 @@ const About: FunctionComponent = () => {
                     <SiteTechContainer>
                         <SiteTechTitle>{`If you're curious, this site:`}</SiteTechTitle>
                         <TechList>
-                            <li>{'Was built using React and Typescript with Next.js'}</li>
+                            <li>{'Was built using React + Typescript with Next.js'}</li>
                             <li>
                                 {'Styles CSS with '}
                                 <Link href='https://emotion.sh/docs/introduction' rel='noopener noreferrer' target='_blank'>
                                     <LinkText>{'Emotion'}</LinkText>
                                 </Link>
-                                {' styled components'}
+                                {' and uses Material UI components'}
                             </li>
-                            <li>{'Uses the Material UI component library'}</li>
+                            <li>{'Handles animations using gsap'}</li>
                             <li>
                                 {'Renders the typewriter using the '}
                                 <Link href='https://emotion.sh/docs/introduction' rel='noopener noreferrer' target='_blank'>
